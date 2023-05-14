@@ -178,8 +178,8 @@ namespace ETicaretAspNetProje.Controllers
                     //şifre güncelleme
                     var deger = ctx.Musteriler.FirstOrDefault(m=>m.EMail== sifreSifirla.Email);
 
-                    //deger.Sifre = md5metin;
-                    ViewData["a"] = md5metin;
+                    deger.Sifre = md5metin;
+                   
                     
                     ctx.SaveChanges();
                     return RedirectToAction("AnaSayfa", "Home");
