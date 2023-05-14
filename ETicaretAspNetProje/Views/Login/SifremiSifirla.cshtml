@@ -1,0 +1,66 @@
+﻿@model SifreSifirla
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Tıkla Al</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="~/lib/bootstrap-5.3.0/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="~/lib/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="~/css/util.css">
+    <link href="~/css/sifremisifirlastyle.css" type="text/css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100 p-t-85 p-b-20">
+                <form class="login100-form validate-form form-group" method="post">
+                    <span class="login100-form-title p-b-70">
+                        Tıkla Al
+                    </span>
+
+
+                    <div id="input-email" class="wrap-input100 validate-input m-t-35 m-b-35"
+                         data-validate="Yeni Şifrenizi Girin">
+                        @*<input class="input100" type="text" name="YeniSifre">*@
+                        @Html.TextBoxFor(s=>s.YeniSifre,new {@class="input100"})
+                        <span class="focus-input100" data-placeholder="Yeni Şifre"></span>
+                    </div>
+
+                    <div id="input-email" class="wrap-input100 validate-input m-t-35 m-b-35"
+                         data-validate="Yeni Şifrenizi Tekrar Girin">
+                        @*<input class="input100" type="text" name="YeniSifreTekrar">*@
+                      @Html.TextBoxFor(s=>s.YeniSifreTekrar,new {@class="input100"})
+                        <span class="focus-input100" data-placeholder="Yeni Şifre (Tekrar)"></span>
+                    </div>
+                    <p id="hata">@ViewData["Hata"]</p>
+                    <div class="container-login100-form-btn">
+                        <button class="login100-form-btn" onclick="a()">
+                            Şifremi Sıfırla
+                        </button>
+                    </div>
+                   
+
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="dropDownSelect1"></div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/signupscript.js"></script>
+</body>
+
+</html>

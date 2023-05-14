@@ -1,0 +1,79 @@
+﻿@model SifreSifirla
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Tıkla Al</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="~/lib/bootstrap-5.3.0/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="~/lib/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="~/css/util.css">
+    <link href="~/css/sifremiunuttumstyle.css" type="text/css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100 p-t-85 p-b-20">
+                <form class="login100-form validate-form form-group" method="post">
+                    <span class="login100-form-title p-b-70">
+                        Tıkla Al
+                    </span>
+
+
+                    <div id="input-email" class="wrap-input100 validate-input m-t-35 m-b-35"
+                         data-validate="E-Postanızı Girin">
+                        @*<input class="input100" type="text" name="Email">*@
+                        @Html.TextBoxFor(s=>s.Email, new {@class="input100"})
+                        <span class="focus-input100" data-placeholder="E-Posta Adresi"></span>
+                    </div>
+                    <p id="hata">@ViewData["Hata"]</p>
+                    <pre class="qrcode-title">Doğrulama Kodu İçin QR Kodunu Kameraya Okutun.
+Kodu Yenilemek İçin QR Koda Tıklayın.
+                    </pre>
+                    <a href="/Login/SifremiUnuttum"> <img src='@ViewBag.qrcode' class="qrcode" alt='QR Code' /></a>
+
+                    <div id="input-email" class="wrap-input100 validate-input m-t-35 m-b-35"
+                         data-validate="Doğrulama Kodunu Girin">
+                        @*<input class="input100" type="text" name="qrdogrulama">*@
+                        @Html.TextBoxFor(s=>s.GirilenKod, new {@class="input100",onclick = "qr()"})
+                        <span class="focus-input100" data-placeholder="QR Doğrulama Kodu"></span>
+                    </div>
+                    <p id="hata2">@ViewData["Hata2"]</p>
+                    <div class="container-login100-form-btn">
+                        <button class="login100-form-btn">
+                            Şifre Sıfırlama İsteği Gönder
+                        </button>
+                    </div>
+                    <div class="signup-link">
+                        <a href="/Home/AnaSayfa/">Ana Sayfaya Dönün.</a>
+                    </div>
+
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="dropDownSelect1"></div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/signupscript.js"></script>
+    <script>
+        function qr(){
+            alert("@ViewData["text"]");
+        }
+    </script>
+</body>
+
+</html>

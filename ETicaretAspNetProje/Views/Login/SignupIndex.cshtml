@@ -1,0 +1,93 @@
+﻿@model Musteri
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Tıkla Al</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="~/lib/bootstrap-5.3.0/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="~/lib/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="~/css/util.css">
+    <link href="~/css/signupstyle.css" type="text/css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100 p-t-85 p-b-20">
+                <form class="login100-form validate-form form-group" method="post">
+                    <span class="login100-form-title p-b-70">
+                        Tıkla Al
+                    </span>
+
+                    <div id="input-name" class="wrap-input100 validate-input m-t-65 m-l- m-b-35"
+                         data-validate="Adınızı Girin">
+@*                        <input class="input100" type="text" name="Ad">*@
+                        @Html.TextBoxFor(m=>m.MusteriAdi,new {@value="",@class="input100"})
+                      <span class="focus-input100" data-placeholder="Ad"></span>
+                    </div>
+                    <div id="input-surname" class="wrap-input100 validate-input m-t-45 m-b-35"
+                         data-validate="Soyadınızı Girin">
+                        @*<input class="input100" type="text" name="Soyad">*@
+                        @Html.TextBoxFor(m=>m.MusteriSoyadi,new {@value="",@class="input100"})
+                        <span class="focus-input100" data-placeholder="Soyad"></span>
+                    </div>
+                    <div id="input-email" class="wrap-input100 validate-input m-t-35 m-b-35"
+                         data-validate="E-Postanızı Girin">
+                        @*<input class="input100" type="text" name="Email">*@
+                        @Html.TextBoxFor(m=>m.EMail,new {@value="",@class="input100"})
+                        <span class="focus-input100" data-placeholder="E-Posta Adresi"></span>
+                    </div>
+                    <p id="hata">@ViewData["Hata"]</p>
+
+                    <div id="input-pass" class="wrap-input100 validate-input m-b-50" data-validate="Şifrenizi Girin">
+                        @*<input class="input100" type="password" name="Sifre">*@
+                        @Html.TextBoxFor(m=>m.Sifre,new {@value="",@class="input100"})
+                        <span class="focus-input100" data-placeholder="Şifre"></span>
+                    </div>
+
+                    <div class="sozlesme validate-input " data-validate="Metni Onaylayın">
+                        <label>
+                            <input type="checkbox" required>Aydınlatma Metnini Okudum, Onaylıyorum.
+                            <span class="focus-input100"></span>
+                        </label>
+                        <label class="kvkk">
+                            <input type="checkbox" required> KVKK Metnini Okudum, Onaylıyorum.
+                        </label>
+                    </div>
+
+                    <div class="container-login100-form-btn">
+                        <button class="login100-form-btn">
+                            Üye Ol
+                        </button>
+                    </div>
+                    <div class="signup-link">
+                        Hesabınız Var Mı? <a href="/Login/LoginIndex/">Hemen Alışverişe Başlayın.</a>
+                    </div>
+
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="dropDownSelect1"></div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/signupscript.js"></script>
+
+
+</body>
+
+</html>

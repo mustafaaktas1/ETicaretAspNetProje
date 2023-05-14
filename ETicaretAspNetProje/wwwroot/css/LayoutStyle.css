@@ -1,0 +1,319 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+nav {
+    left: 0;
+    width: 100%;
+    background-color: #f1e6e6;
+    position: page;
+    height: 130px;
+    top: 0;
+    content: "";
+    display: block;
+    border-bottom: 10px rgba(216,167,217,0.7);
+    border-bottom-style: solid;
+    padding-bottom: 70px;
+}
+
+
+
+#logo {
+    font-family: 'Poppins', sans-serif;
+    color: orange;
+    margin-left: 60px;
+    margin-top: 30px;
+    font-size: 35px;
+    font-weight: bolder;
+}
+
+    #logo a {
+        font-family: 'Poppins', sans-serif;
+        color: orange;
+        font-size: 35px;
+        text-decoration: none;
+        font-weight: bolder;
+    }
+
+#slogan {
+    position: absolute;
+    font-family: 'Open sans', sans-serif;
+    left: 85px;
+    top: 65px;
+    font-size: 15px;
+    color: orange;
+    font-weight: bold;
+}
+
+    #slogan a {
+        font-family: 'Open sans', sans-serif;
+        font-size: 15px;
+        color: orange;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+.navlinkler {
+    position: absolute;
+    top: 25px;
+    right: 100px;
+    text-align: right;
+}
+
+#navlink {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: #808080;
+}
+
+/*--------------------------login butonu---------------------*/
+.login {
+    /*     position: relative; 
+*/ display: flex;
+}
+
+.login-hide { /* login butonunu gizler*/
+    display: none;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100px;
+    right: 145px;
+    display: none;
+    z-index: 1;
+}
+
+#loginbtn {
+    position: absolute;
+    background-color: orange;
+    right: 150px;
+    top: 50px;
+    width: 150px;
+    height: 50px;
+}
+
+    #loginbtn:hover {
+        background-color: #808080;
+        color: black;
+        animation-delay: 0.5s;
+    }
+
+.login:hover .dropdown-menu {
+    display: block;
+}
+/*--------------------------login butonu---------------------*/
+/*--------------------------hesabım butonu---------------------*/
+.account {
+    /*     position: relative; 
+*/ display: flex;
+}
+
+.account-hide { /* account butonunu gizler*/
+    display: none;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100px;
+    right: 145px;
+    display: none;
+    z-index: 1;
+}
+
+#accountbtn {
+    position: absolute;
+    background-color: orange;
+    right: 250px;
+    top: 50px;
+    width: 150px;
+    height: 50px;
+}
+
+#sepetbtn {
+    position: absolute;
+    background-color: orange;
+    right: 80px;
+    top: 50px;
+    width: 150px;
+    height: 50px;
+}
+
+#accountbtn:hover {
+    background-color: #808080;
+    color: black;
+    animation-delay: 0.5s;
+}
+
+#sepetbtn:hover {
+    background-color: #808080;
+    color: black;
+    animation-delay: 0.5s;
+}
+
+.login:hover .dropdown-menu {
+    display: block;
+}
+
+
+/*--------------------------hesabım butonu---------------------*/
+
+
+
+
+.input-group {
+    position: relative;
+    top: -33px;
+    padding-left: 32%;
+}
+
+
+#search {
+    /* width: 20%;*/
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: 1px solid black;
+    background: transparent;
+    padding: 10px 20px;
+    font-size: 18px;
+    width: 350px;
+    font-size: 15px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+    #search:hover {
+        box-shadow: 0 0 5px black;
+        transition-delay: 0, 5s;
+        animation-delay: 5s;
+    }
+
+#button-addon2 {
+    border: 1px solid black;
+    width: 75px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+.nav-link {
+    position: relative;
+    top: -25px;
+    left: 50px;
+}
+
+#kategori {
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    left: 100px;
+    font-size: 15px;
+    margin-right: 40px;
+    text-decoration: none;
+    padding-top: 40px;
+    font-weight: bold;
+    color: #5c5858;
+}
+
+/* ///////////// Navbar //////////////////// */
+
+/*///////////////////////// Footer /////////////////////////////// */
+footer {
+    position:relative;
+    padding: 30px;
+    height: 365px;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    background: #f1e6e6;
+}
+
+.footer-menu h5 {
+    font-weight: 600;
+}
+
+
+
+.nav-scroller {
+    position: relative;
+    z-index: 2;
+    height: 2.75rem;
+    overflow-y: hidden;
+}
+
+    .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+
+
+.social-buttons {
+    padding-right: 40px;
+    padding-top: 10px;
+    font-size: 15px;
+}
+
+    .social-buttons li {
+        font-size: 23px;
+    }
+
+div .subscribe {
+    margin-left: 100px;
+    margin-top: 40px;
+}
+
+.subscribe h5 {
+    font-weight: 600;
+}
+
+.subscribe input {
+    width: 60%;
+}
+
+#dark-mode-label {
+    position: relative;
+    right: 20px;
+    bottom: -20px;
+}
+
+.footer-menu ul {
+    margin-left: -48px;
+    margin-top: 40px;
+}
+.footer-menu .flex-column2{
+    position:relative;
+    margin-top:60px;
+    
+}
+.row {
+    padding-top: 20px;
+    padding-left: 50px;
+}
+
+.link-underline {
+    text-decoration: underline;
+}
+/* //////////////////sayfa İçeriği //////////////////// */
+main {
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+/*///////////////////sayfa içeriği ////////////////////*/
+
+
+
